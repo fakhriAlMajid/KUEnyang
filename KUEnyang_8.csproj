@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5F7FCF4F-0FF8-4F7A-9624-0D154C2024E5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>KUEnyang_8</RootNamespace>
+    <AssemblyName>KUEnyang_8</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.UI2, Version=2.0.4.7, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>packages\Guna.UI2.WinForms.2.0.4.7\lib\net472\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin\FormCRUDJabatan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\FormCRUDJabatan.Designer.cs">
+      <DependentUpon>FormCRUDJabatan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\FormUbahKaryawan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\FormUbahKaryawan.Designer.cs">
+      <DependentUpon>FormUbahKaryawan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassJabatan.cs" />
+    <Compile Include="ClassKaryawan.cs" />
+    <Compile Include="ClassKategori.cs" />
+    <Compile Include="ClassProduk.cs" />
+    <Compile Include="Admin\FormCRUDKaryawan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\FormCRUDKaryawan.Designer.cs">
+      <DependentUpon>FormCRUDKaryawan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventaris\FormKategori.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventaris\FormKategori.Designer.cs">
+      <DependentUpon>FormKategori.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventaris\FormKondisi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventaris\FormKondisi.Designer.cs">
+      <DependentUpon>FormKondisi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventaris\FormCRUDProduk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventaris\FormCRUDProduk.Designer.cs">
+      <DependentUpon>FormCRUDProduk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\FormTambahKaryawan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\FormTambahKaryawan.Designer.cs">
+      <DependentUpon>FormTambahKaryawan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventaris\FormUbahProduk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventaris\FormUbahProduk.Designer.cs">
+      <DependentUpon>FormUbahProduk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kasir\FormTambahPenjualan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kasir\FormTambahPenjualan.Designer.cs">
+      <DependentUpon>FormTambahPenjualan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\FormAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\FormAdmin.Designer.cs">
+      <DependentUpon>FormAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAwal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAwal.Designer.cs">
+      <DependentUpon>FormAwal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventaris\FormInventaris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventaris\FormInventaris.Designer.cs">
+      <DependentUpon>FormInventaris.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kasir\FormKasir.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kasir\FormKasir.Designer.cs">
+      <DependentUpon>FormKasir.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kasir\FormTambahPreorder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kasir\FormTambahPreorder.Designer.cs">
+      <DependentUpon>FormTambahPreorder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventaris\FormTambahProduk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventaris\FormTambahProduk.Designer.cs">
+      <DependentUpon>FormTambahProduk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kasir\FormTamPen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kasir\FormTamPen.Designer.cs">
+      <DependentUpon>FormTamPen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kasir\FormTampre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kasir\FormTampre.Designer.cs">
+      <DependentUpon>FormTampre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Admin\FormAdmin.resx">
+      <DependentUpon>FormAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\FormCRUDJabatan.resx">
+      <DependentUpon>FormCRUDJabatan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\FormUbahKaryawan.resx">
+      <DependentUpon>FormUbahKaryawan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAwal.resx">
+      <DependentUpon>FormAwal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\FormCRUDKaryawan.resx">
+      <DependentUpon>FormCRUDKaryawan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventaris\FormInventaris.resx">
+      <DependentUpon>FormInventaris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventaris\FormKategori.resx">
+      <DependentUpon>FormKategori.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventaris\FormKondisi.resx">
+      <DependentUpon>FormKondisi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventaris\FormUbahProduk.resx">
+      <DependentUpon>FormUbahProduk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kasir\FormKasir.resx">
+      <DependentUpon>FormKasir.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventaris\FormCRUDProduk.resx">
+      <DependentUpon>FormCRUDProduk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\FormTambahKaryawan.resx">
+      <DependentUpon>FormTambahKaryawan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kasir\FormTambahPenjualan.resx">
+      <DependentUpon>FormTambahPenjualan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kasir\FormTambahPreorder.resx">
+      <DependentUpon>FormTambahPreorder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventaris\FormTambahProduk.resx">
+      <DependentUpon>FormTambahProduk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kasir\FormTamPen.resx">
+      <DependentUpon>FormTamPen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kasir\FormTampre.resx">
+      <DependentUpon>FormTampre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Login Interface %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dashboard Cashier %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vector %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vector %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lsicon_report-filled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dashboard Admin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dashboard Admin %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo Karyawan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo Jabatan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dashboard Inventaris.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vector %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Welcome.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Welcome %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo Username.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vector %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dashboard Cashier %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dashboard Admin %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dashboard Admin %282%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dashboard Admin.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mingcute_back-fill.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Welcome %281%291.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
